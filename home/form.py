@@ -1,13 +1,11 @@
 from django import forms
-from .models import upload
+from .models import report_image
+from django.forms import ModelForm
 
 class ImageForm(forms.ModelForm):
     class Meta:
-        model=upload
-        fields=("image","caption")
+        model=report_image
+        fields=("image",)
+         
+
     
-class ImageForm2(forms.ModelForm):
-    class Meta:
-        print("gsgfgfd")
-        model=upload
-        fields=("image","caption","news")

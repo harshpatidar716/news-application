@@ -52,18 +52,32 @@
             </a>
           </li>
           {% block nav1 %} {% endblock nav1 %}
-          {% if type_of_user == "user"%}
+          {% if type_of_user == "reporter"%}
           <li class="nav-item">
             <a class="nav-link" href="\my_news/">mynews</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="\upload/">upload</a>
+            <a class="nav-link" href="\upload_news/">upload</a>
           </li>
-          {% endif %}
+          {% elif  type_of_user == "admin"%}
+
+          <li class="nav-item">
+            <a class="nav-link" href="\my_news/">mynews</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="\upload_news/">upload</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="\my_admin/">approve_news</a>
+          </li>
+
+          {% else %}
           <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
           </li>
+          {% endif %}
         </ul>
       </div>
 
@@ -87,11 +101,11 @@
 
 
       <!-- Button trigger modal -->
-      <button type="button" class="rounded-circle" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div>
-
-          <img src="static/logo.png" class="rounded-circle image-lg" id="rounded-circle" height="50"
-            alt="Portrait of a Woman" loading="lazy" />
+          <h3>{{password}}</h3>
+          <!-- <img src="static/logo.png" class="rounded-circle image-lg" id="rounded-circle" height="50"
+            alt="Portrait of a Woman" loading="lazy" /> -->
 
 
         </div>
@@ -112,7 +126,7 @@
             <div class="modal-footer">
 
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
-              <form action="logout">
+              <form action="/logout/">
                 <button type="submit" class="btn btn-primary">logout</button>
               </form>
 

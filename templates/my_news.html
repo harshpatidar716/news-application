@@ -2,22 +2,43 @@
 
 {% load static %}
 {% block body %}
-    
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: 40px;
+            border-width: .1cm;
+            
+            font-family: arial;
+          }
+    </style>
     <hr>
-    {% for x in img %}
+    
+    {% for x in data%}
+   
     {% if forloop.first %}<div class="row ">{% endif %}
-        <div class="col-lg-4 col-md-4 col-12" >
-    <div class="text-center mt-2">
-        <img src="{{x.image.url}}" height="40%" width="40%" class="img-thumbnail" alt="...">
-        <h2 class="text-center" >{{x.caption}}</h2>
-        <p class="text-center" >{{x.news}}</p></div>
-        </div>
-       
-        {% if forloop.counter|divisibleby:3 %}
+        {% if x.username == username %}
+        
+        {% for y in data2 %}
+        {% if x.primary_key == y.primary_key %}
+        
+        <div class="card">
+        <!-- <div class="col-lg-4 col-md-4 col-12" >
+        <div class="text-center mt-2"> -->
+            <br>
+        <img src="{{y.image.url}}" height="100%" width="100%" class="img-thumbnail" alt="..."><br>
+        <h2 class="text-center" >{{x.heading}}</h2>
+        <p class="text-center" >{{x.content}}</p></div>
+        {% endif %}
+        {% endfor %}
+        <!-- </div>
+        </div> -->
+        {% endif %}
+        <!-- {% if forloop.counter|divisibleby:1 %}
         
     </div>
     <div class=row>{% endif %}
-        {% if forloop.last %}</div>{% endif %}
+        {% if forloop.last %}</div>{% endif %} -->
     
     {% endfor %}
 

@@ -2,25 +2,37 @@
 
 {% load static %}
 {% block body %}
-<style>
+    <style>
     .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         max-width: 300px;
         margin: 40px;
-
+    
         font-family: arial;
-    }
-</style>
-<hr>
-{% for x in data%}
+      }
+    </style>
+    <hr>
+    {% for x in data%}
     {% if forloop.first %}<div class="row ">{% endif %}
-    {% if x.status == "0" %}
+    {% if x.status == "1" %}
         {% for y in data2 %}
             {% if x.primary_key == y.primary_key %}
                 <div class="card">
                 <img src="{{y.image.url}}" height="100%" width="100%" class="img-thumbnail" alt="...">
                 <h2 class="text-center">{{x.heading}}</h2>
                 <p class="text-center">{{x.content}}</p>
+
+                <form action="/my_admin/" method="post">{% csrf_token %}
+                    <input type="hidden" id="custId" name="primary_key" value="{{x.primary_key}}">
+                    <button type="submit" class="btn btn-success" name="condition" value="approve" >approve</button>
+                </form>
+                
+                <br>
+                <form action="/my_admin/" method="post">{% csrf_token %}
+                    <input type="hidden" id="custId" name="primary_key" value={{x.primary_key}}>
+                    <button type="submit" class="btn btn-danger" name="condition" value="reject">reject</button>
+                </form>
+
                 </div>
             {% endif %}
         {% endfor %}
@@ -43,4 +55,4 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    {% endblock %}
+{% endblock %}
