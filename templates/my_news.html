@@ -2,17 +2,57 @@
 
 {% load static %}
 {% block body %}
-    
+    <style>
+
+          .card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            max-height: 300px;
+            margin: 40px;
+            margin-top: 300px;
+            font-family: arial;
+          }
+    </style>
     <hr>
-    {% for x in img %}
+    
+    
+    {% for x in data%}
     {% if forloop.first %}<div class="row ">{% endif %}
-        <div class="col-lg-4 col-md-4 col-12" >
-    <div class="text-center mt-2">
-        <img src="{{x.image.url}}" height="40%" width="40%" class="img-thumbnail" alt="...">
-        <h2 class="text-center" >{{x.caption}}</h2>
-        <p class="text-center" >{{x.news}}</p></div>
+        {% if x.username == username %}
+        
+        {% for y in data2 %}
+        
+        {% if x.news_id == y.news_id %}
+
+        <div class="cardbody">
+            <div class="card flex-row">
+                <img class="card-img-left example-card-img-responsive" src="{{y.image.url}}" height="100%" width="45%" style="padding: 0.5cm;"/>
+            <div class="card-body">
+
+
+        <!-- <div class="card"> -->
+        <!-- <div class="col-lg-4 col-md-4 col-12" >
+        <div class="text-center mt-2"> -->
+            
+        <!-- <img src="{{y.image.url}}" height="100%" width="100%" class="img-thumbnail" alt="..."><br> -->
+        <h3 class="text-center" >{{x.heading}}</h3>
+        <!-- <p class="text-center" >{{x.content}}</p> -->
+        <button type="submit" class="btn btn-secondary" name="condition" value="approve"  width="100%">
+            {% if x.status == "0" %}
+                <h6>approve</h6>
+            {% elif x.status == "1" %}
+                <h6>pendding</h6>
+            {% else %}
+                <h6>reject</h6>
+            
+            {% endif %}</button>
+        </div></div>
         </div>
-       
+        {% endif %}
+        {% endfor %}
+        <!-- </div>
+        </div> -->
+        {% endif %}
         {% if forloop.counter|divisibleby:3 %}
         
     </div>

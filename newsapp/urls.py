@@ -23,10 +23,8 @@ admin.site.site_title = "newsapp admin portal1"
 admin.site.index_title = "Welcome to newsapp"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("",include('home.urls')),
-    
+    path("admin/", admin.site.urls),
+    path("", include("home.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 print(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
-

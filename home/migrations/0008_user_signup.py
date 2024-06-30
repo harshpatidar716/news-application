@@ -4,23 +4,30 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0007_delete_user_signup'),
+        ("home", "0007_delete_user_signup"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='user_signup',
+            name="user_signup",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('firstname', models.CharField(max_length=50)),
-                ('midelname', models.CharField(max_length=50)),
-                ('lastname', models.CharField(max_length=50)),
-                ('inlineRadioOptions', models.CharField(max_length=50)),
-                ('birth', models.DateField(max_length=50)),
-                ('email', models.CharField(max_length=50)),
-                ('phone', models.IntegerField(verbose_name=10)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("firstname", models.CharField(max_length=50)),
+                ("midelname", models.CharField(max_length=50)),
+                ("lastname", models.CharField(max_length=50)),
+                ("inlineRadioOptions", models.CharField(max_length=50)),
+                ("birth", models.DateField(max_length=50)),
+                ("email", models.CharField(max_length=50)),
+                ("phone", models.IntegerField(verbose_name=10)),
             ],
         ),
     ]

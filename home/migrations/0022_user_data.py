@@ -4,24 +4,31 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0021_delete_data'),
+        ("home", "0021_delete_data"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='user_data',
+            name="user_data",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('firstname', models.CharField(default='null', max_length=50)),
-                ('midlename', models.CharField(default='null', max_length=50)),
-                ('lastname', models.CharField(default='null', max_length=50)),
-                ('gender', models.CharField(default='null', max_length=50)),
-                ('birth', models.DateField(default='1111/11/11', max_length=50)),
-                ('email', models.CharField(default='null', max_length=50)),
-                ('phone', models.CharField(default='null', max_length=10)),
-                ('password', models.CharField(default='null', max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("firstname", models.CharField(default="null", max_length=50)),
+                ("midlename", models.CharField(default="null", max_length=50)),
+                ("lastname", models.CharField(default="null", max_length=50)),
+                ("gender", models.CharField(default="null", max_length=50)),
+                ("birth", models.DateField(default="1111/11/11", max_length=50)),
+                ("email", models.CharField(default="null", max_length=50)),
+                ("phone", models.CharField(default="null", max_length=10)),
+                ("password", models.CharField(default="null", max_length=50)),
             ],
         ),
     ]

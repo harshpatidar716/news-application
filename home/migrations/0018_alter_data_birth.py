@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0017_remove_data_name_data_birth_data_email_and_more'),
+        ("home", "0017_remove_data_name_data_birth_data_email_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='data',
-            name='birth',
-            field=models.DateField(default='1/1/0000', max_length=50),
+            model_name="data",
+            name="birth",
+            field=models.DateField(default="1/1/0000", max_length=50),
         ),
     ]

@@ -4,19 +4,26 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0026_alter_user_data_midlename'),
+        ("home", "0026_alter_user_data_midlename"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='upload',
+            name="upload",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('file', models.ImageField(upload_to='')),
-                ('heading', models.CharField(max_length=50)),
-                ('news', models.CharField(max_length=10000)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("file", models.ImageField(upload_to="")),
+                ("heading", models.CharField(max_length=50)),
+                ("news", models.CharField(max_length=10000)),
             ],
         ),
     ]

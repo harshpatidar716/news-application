@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+<style>
+  .slideshow {
+    border: none;
+    margin-top: 10px;
+    margin-left: 400px;
+    margin: 40px;
+    padding-left: 50px;
+    padding-top: 50px;
+    width: 500px;
+    height: 1000px;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    margin: 40px;
+
+    font-family: arial;
+  }
+  .body{
+    margin-top: 100px;
+
+  }
+</style>
+
+
+<div class="body">
+
+      {% for x in data2 %}
+
+      {% if x.news_id == news_id %}
+
+      <div class="card" style="width: 40rem;">
+        <h3 class="card-title" style="padding: 0.5cm; color:black">{{heading}}</h3>
+        
+        <br>
+        <img src="{{x.image.url}}" class="card-img-top" alt="..." height="100%" width="45%" style="padding: 0.5cm;">
+        <br>
+        <div class="card-body">
+
+          <p class="card-text" style="padding: 0.5cm;">{{content}}
+          </p>
+          
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+</div>
+{% endblock body %}

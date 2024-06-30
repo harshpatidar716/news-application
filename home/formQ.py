@@ -1,8 +1,8 @@
 from django import forms
-from .models import upload
+from .models import reporter_img
+
 
 class ImageForm(forms.ModelForm):
     class Meta:
-        model=upload
-        fields=("image","caption")
-    
+        model = reporter_img
+        fields = ("image", "username")

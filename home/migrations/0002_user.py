@@ -4,24 +4,31 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0001_initial'),
+        ("home", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='user',
+            name="user",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('firstname', models.CharField(max_length=50)),
-                ('midelname', models.CharField(max_length=50)),
-                ('lastname', models.CharField(max_length=50)),
-                ('inlineRadioOptions', models.CharField(max_length=50)),
-                ('birth', models.CharField(max_length=50)),
-                ('email', models.CharField(max_length=50)),
-                ('phone', models.IntegerField()),
-                ('password', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("firstname", models.CharField(max_length=50)),
+                ("midelname", models.CharField(max_length=50)),
+                ("lastname", models.CharField(max_length=50)),
+                ("inlineRadioOptions", models.CharField(max_length=50)),
+                ("birth", models.CharField(max_length=50)),
+                ("email", models.CharField(max_length=50)),
+                ("phone", models.IntegerField()),
+                ("password", models.CharField(max_length=50)),
             ],
         ),
     ]

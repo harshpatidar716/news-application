@@ -4,20 +4,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0013_remove_user_email_remove_user_password'),
+        ("home", "0013_remove_user_email_remove_user_password"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='user',
-            name='name',
-            field=models.CharField(default='harsh', max_length=50),
+            model_name="user",
+            name="name",
+            field=models.CharField(default="harsh", max_length=50),
         ),
         migrations.AddField(
-            model_name='user',
-            name='password',
-            field=models.CharField(default='harsh', max_length=50),
+            model_name="user",
+            name="password",
+            field=models.CharField(default="harsh", max_length=50),
         ),
     ]

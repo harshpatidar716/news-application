@@ -4,54 +4,53 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0016_data_delete_users'),
+        ("home", "0016_data_delete_users"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='data',
-            name='name',
+            model_name="data",
+            name="name",
         ),
         migrations.AddField(
-            model_name='data',
-            name='birth',
-            field=models.DateField(default='null', max_length=50),
+            model_name="data",
+            name="birth",
+            field=models.DateField(default="null", max_length=50),
         ),
         migrations.AddField(
-            model_name='data',
-            name='email',
-            field=models.CharField(default='null', max_length=50),
+            model_name="data",
+            name="email",
+            field=models.CharField(default="null", max_length=50),
         ),
         migrations.AddField(
-            model_name='data',
-            name='firstname',
-            field=models.CharField(default='null', max_length=50),
+            model_name="data",
+            name="firstname",
+            field=models.CharField(default="null", max_length=50),
         ),
         migrations.AddField(
-            model_name='data',
-            name='gender',
-            field=models.CharField(default='null', max_length=50),
+            model_name="data",
+            name="gender",
+            field=models.CharField(default="null", max_length=50),
         ),
         migrations.AddField(
-            model_name='data',
-            name='lastname',
-            field=models.CharField(default='null', max_length=50),
+            model_name="data",
+            name="lastname",
+            field=models.CharField(default="null", max_length=50),
         ),
         migrations.AddField(
-            model_name='data',
-            name='midlename',
-            field=models.CharField(default='null', max_length=50),
+            model_name="data",
+            name="midlename",
+            field=models.CharField(default="null", max_length=50),
         ),
         migrations.AddField(
-            model_name='data',
-            name='phone',
-            field=models.CharField(default='null', max_length=10),
+            model_name="data",
+            name="phone",
+            field=models.CharField(default="null", max_length=10),
         ),
         migrations.AlterField(
-            model_name='data',
-            name='password',
-            field=models.CharField(default='null', max_length=50),
+            model_name="data",
+            name="password",
+            field=models.CharField(default="null", max_length=50),
         ),
     ]

@@ -4,28 +4,35 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0028_alter_user_data_birth'),
+        ("home", "0028_alter_user_data_birth"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='reporter',
+            name="reporter",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('firstname', models.CharField(max_length=50)),
-                ('midlename', models.CharField(max_length=50)),
-                ('lastname', models.CharField(default='patidarr', max_length=50)),
-                ('gender', models.CharField(max_length=50)),
-                ('birth', models.DateField(default='1111/11/11', max_length=50)),
-                ('email', models.CharField(default='harsh@gmail.com', max_length=50)),
-                ('phone', models.CharField(default='1111111111', max_length=10)),
-                ('password', models.CharField(default='harsh', max_length=50)),
-                ('adress', models.CharField(max_length=50)),
-                ('school', models.CharField(max_length=50)),
-                ('college', models.CharField(max_length=50)),
-                ('skill', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("firstname", models.CharField(max_length=50)),
+                ("midlename", models.CharField(max_length=50)),
+                ("lastname", models.CharField(default="patidarr", max_length=50)),
+                ("gender", models.CharField(max_length=50)),
+                ("birth", models.DateField(default="1111/11/11", max_length=50)),
+                ("email", models.CharField(default="harsh@gmail.com", max_length=50)),
+                ("phone", models.CharField(default="1111111111", max_length=10)),
+                ("password", models.CharField(default="harsh", max_length=50)),
+                ("adress", models.CharField(max_length=50)),
+                ("school", models.CharField(max_length=50)),
+                ("college", models.CharField(max_length=50)),
+                ("skill", models.CharField(max_length=50)),
             ],
         ),
     ]

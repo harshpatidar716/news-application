@@ -4,21 +4,28 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0015_rename_user_users'),
+        ("home", "0015_rename_user_users"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='data',
+            name="data",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(default='harsh', max_length=50)),
-                ('password', models.CharField(default='harsh', max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(default="harsh", max_length=50)),
+                ("password", models.CharField(default="harsh", max_length=50)),
             ],
         ),
         migrations.DeleteModel(
-            name='users',
+            name="users",
         ),
     ]

@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Home Page</title>
-  <style>
-    /* Some basic styling for the content */
-    .content {
-      margin: 20px;
-      padding: 20px;
-      background-color: #f0f0f0;
-    }
-  </style>
+  <title>Bootstrap Example</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/b  ootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <h1>Welcome to the Home Page</h1>
-  
-  <!-- Links to display content -->
-  <a href="#content1">Show Content 1</a>
-  <br>
-  <a href="#content2">Show Content 2</a>
-  
-  <!-- Content sections -->
-  <div class="content" id="content1">
-    <h2>Content 1</h2>
-    <p>This is the first content section.</p>
+
+<div class="container">
+  <h2>Small Modal</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Small Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a small modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <div class="content" id="content2">
-    <h2>Content 2</h2>
-    <p>This is the second content section.</p>
-  </div>
+</div>
+
 </body>
 </html>

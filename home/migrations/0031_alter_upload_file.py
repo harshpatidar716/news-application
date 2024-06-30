@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0030_delete_login'),
+        ("home", "0030_delete_login"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='upload',
-            name='file',
-            field=models.ImageField(upload_to='images/'),
+            model_name="upload",
+            name="file",
+            field=models.ImageField(upload_to="images/"),
         ),
     ]

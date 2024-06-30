@@ -4,20 +4,19 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0033_alter_upload_file'),
+        ("home", "0033_alter_upload_file"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='upload',
-            old_name='heading',
-            new_name='caption',
+            model_name="upload",
+            old_name="heading",
+            new_name="caption",
         ),
         migrations.RenameField(
-            model_name='upload',
-            old_name='file',
-            new_name='image',
+            model_name="upload",
+            old_name="file",
+            new_name="image",
         ),
     ]

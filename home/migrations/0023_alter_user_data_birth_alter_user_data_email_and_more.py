@@ -4,45 +4,44 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0022_user_data'),
+        ("home", "0022_user_data"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='user_data',
-            name='birth',
-            field=models.DateField(default='11/11/1111', max_length=50),
+            model_name="user_data",
+            name="birth",
+            field=models.DateField(default="11/11/1111", max_length=50),
         ),
         migrations.AlterField(
-            model_name='user_data',
-            name='email',
-            field=models.CharField(default='harsh@gmail.com', max_length=50),
+            model_name="user_data",
+            name="email",
+            field=models.CharField(default="harsh@gmail.com", max_length=50),
         ),
         migrations.AlterField(
-            model_name='user_data',
-            name='firstname',
-            field=models.CharField(default='harsh', max_length=50),
+            model_name="user_data",
+            name="firstname",
+            field=models.CharField(default="harsh", max_length=50),
         ),
         migrations.AlterField(
-            model_name='user_data',
-            name='gender',
-            field=models.CharField(default='male', max_length=50),
+            model_name="user_data",
+            name="gender",
+            field=models.CharField(default="male", max_length=50),
         ),
         migrations.AlterField(
-            model_name='user_data',
-            name='lastname',
-            field=models.CharField(default='patidarr', max_length=50),
+            model_name="user_data",
+            name="lastname",
+            field=models.CharField(default="patidarr", max_length=50),
         ),
         migrations.AlterField(
-            model_name='user_data',
-            name='password',
-            field=models.CharField(default='harsh', max_length=50),
+            model_name="user_data",
+            name="password",
+            field=models.CharField(default="harsh", max_length=50),
         ),
         migrations.AlterField(
-            model_name='user_data',
-            name='phone',
-            field=models.CharField(default='1111111111', max_length=10),
+            model_name="user_data",
+            name="phone",
+            field=models.CharField(default="1111111111", max_length=10),
         ),
     ]

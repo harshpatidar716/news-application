@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0009_rename_user_signup_user'),
+        ("home", "0009_rename_user_signup_user"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='user',
-            new_name='data',
+            old_name="user",
+            new_name="data",
         ),
     ]
